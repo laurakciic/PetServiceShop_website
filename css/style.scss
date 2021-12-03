@@ -269,6 +269,41 @@ section{
     }
 }
 
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .image{
+        flex: 1 1 40rem;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .content{
+        flex: 1 1 40rem;
+
+        h3{
+            color: $black;
+            font-size: 4rem;
+
+            span{
+                color: $carrot-color;
+            }
+        }
+
+        p{
+            font-size: 1.6rem;
+            color: $light-color;
+            padding: 1rem 0;
+            line-height: 2;
+        }
+    }
+}
+
 
 
 
