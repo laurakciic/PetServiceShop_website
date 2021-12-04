@@ -2,12 +2,12 @@
 
 *{
     font-family: 'Poppins', sans-serif;
-    margin:0; padding:0;
+    margin: 0; padding: 0;
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
     text-transform: capitalize;
-    transition: .2s linear;
+    transition: .2s linear;     // linear - specifies a transition effect with the same speed from start to end
 }
 
 $carrot-color: #e67e22;
@@ -16,9 +16,10 @@ $white: #fff;
 $light-color: #666; 
 $light-bg: #eee; 
 $border: .2rem solid $black;
-$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+$box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);  // shadow effects around an element's frame
 
-@mixin grid($val) {
+// Flexible Box Layout Module, Grid Mixins library
+@mixin grid($val) {      
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax($val, 1f));
     gap: 1.5rem;
@@ -48,25 +49,25 @@ $box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    scroll-padding-top: 4rem;
+    overflow-x: hidden;         // content is clipped and no scrolling mechanism is provided
+    scroll-behavior: smooth;    // the scrolling box scrolls in a smooth fashion
+    scroll-padding-top: 4rem;   // target region for placing things in view of the user
 
-    &::-webkit-scrollbar{
+    &::-webkit-scrollbar{           // entire scrollbar
         width: 1rem;
     }
 
-    &::-webkit-scrollbar-track{
+    &::-webkit-scrollbar-track{     // draggable scrolling handle
         background: transparent;
     }
 
-    &::-webkit-scrollbar-thumb{
+    &::-webkit-scrollbar-thumb{     // progress bar of the scrollbar, where there is a gray bar on top of a white bar
         background: $carrot-color;
         border-radius: 5rem;
     }
 }
 
-section{
+section{    // represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it
     padding: 5rem 9%;   
 }
 
@@ -115,7 +116,7 @@ section{
 
 .header{
     background: $white;
-    display: flex;
+    display: flex;                      // defines a flex container
     align-items: center;
     justify-content: space-between;
     padding: 2rem 9%;

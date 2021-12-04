@@ -1,21 +1,53 @@
 ## Pet Service Shop Website
 
-### Rem values note
+### Notes
+#### Rem values
 - considering 1rem = 10px and .1rem = 1px
 - 62.5% in html tag
 - when it comes to media queries, switching from 62.5% to 55%
 
-### Links
-- font awesome cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
+### Content
+- font awesome cdn https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
 
-- paw icon: https://fontawesome.com/v5.15/icons/paw
-- bars icon: https://fontawesome.com/v5.15/icons/bars
-- user icon: https://fontawesome.com/v5.15/icons/user
+- paw icon https://fontawesome.com/v5.15/icons/paw
+- bars icon https://fontawesome.com/v5.15/icons/bars
+- user icon https://fontawesome.com/v5.15/icons/user
 
-- Google fonts: https://fonts.google.com/specimen/Poppins
+- Google fonts https://fonts.google.com/specimen/Poppins
 
-- CSS clip-path maker: https://bennettfeely.com/clippy/
+- CSS clip-path maker https://bennettfeely.com/clippy/
 
 ### Help
-- import SCSS into HTML: https://stackoverflow.com/questions/60602125/how-to-import-scss-files-into-html-files
+- import SCSS into HTML https://stackoverflow.com/questions/60602125/how-to-import-scss-files-into-html-files
+
+### Useful
+#### CSS
+- selectors https://www.w3schools.com/cssref/css_selectors.asp
+    - & for pseudo class selectors https://sparkbox.com/foundry/how_to_use_ampersands_to_simplifiy_your_sass
+
+- transitions https://www.w3schools.com/css/css3_transitions.asp
+
+- box-shadow effect https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+
+- overflow-x https://www.w3schools.com/cssref/css3_pr_overflow-x.asp
+
+- scroll behavior https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior
+    - note: scrolls performed by the user are not affected by this property!
+
+- scroll padding top https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top
+
+- flex container https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+- grid template columns https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
+    - repeat() https://developer.mozilla.org/en-US/docs/Web/CSS/repeat()
+
+- webkit scrollbar https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar
+
+- keyframes https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+
+#### SASS & SCSS
+- SASS basics https://sass-lang.com/guide
+- SASS Mixins Flexbox Grid library https://www.npmjs.com/package/flexbox-grid-mixins
+
+- difference between SASS and SCSS https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
 
