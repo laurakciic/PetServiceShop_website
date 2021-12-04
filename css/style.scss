@@ -21,7 +21,7 @@ $box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);  // shadow effects around an element
 // Flexible Box Layout Module, Grid Mixins library
 @mixin grid($val) {      
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax($val, 1f));
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
     gap: 1.5rem;
 }
 
@@ -103,7 +103,7 @@ section{    // represents a generic standalone section of a document, which does
     }
 
     &:hover{
-        color:$white;
+        color: $white;
     }
 }
 
@@ -141,7 +141,7 @@ section{    // represents a generic standalone section of a document, which does
     }
 
     .navbar a{
-        margin:0 1rem;
+        margin: 0 1rem;
         font-size: 1.7rem;
         color: $light-color;
 
@@ -305,8 +305,58 @@ section{    // represents a generic standalone section of a document, which does
     }
 }
 
+.dog-food,
+.cat-food{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
 
+    .image{
+        flex:1 1 40rem;
 
+        img{
+            width: 100%;
+        }
+    }
+
+    .content{
+        flex:1 1 40rem;
+        text-align: center;
+        padding: 2rem;
+        
+        h3{
+            font-size: 3.5rem;
+            color: $black;
+
+            span{
+                color: $carrot-color;
+            }
+        }
+
+        p{
+            padding: 1rem 0;
+            line-height: 2;
+            color: $light-color;
+            font-size: 1.6rem;
+        }
+
+        a{  // shopping dog and cat animation 
+            img{
+                height: 30rem;
+                margin-top: 1rem;
+            }
+
+            &:hover img{
+                transform: rotate(-15deg);
+            }
+        }
+    }
+}
+
+.cat-food{
+    flex-wrap: wrap-reverse;    // in minimised window show cat_food.JPG first, then text and shopping_cat.png 
+}
 
 
 

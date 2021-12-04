@@ -51,3 +51,9 @@
 
 - difference between SASS and SCSS https://www.geeksforgeeks.org/what-is-the-difference-between-scss-and-sass/
 
+#### Other
+- images https://www.shutterstock.com/
+- mirroring images https://www.resizepixel.com/mirror-image/
+- cat food images https://www.pet-centar.hr/macke/hrana-1/dehidrirana-hrana.aspx?page=6&sort=PRODUCT_NAME-BASC
+- dog food images https://www.pet-centar.hr/psi/hrana/rustican.aspx
+
