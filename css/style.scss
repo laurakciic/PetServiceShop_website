@@ -71,6 +71,17 @@ section{    // represents a generic standalone section of a document, which does
     padding: 5rem 9%;   
 }
 
+.heading{
+    padding-bottom: .1rem;
+    text-align: center;
+    font-size: 3.5rem;
+    color: $black;
+
+    span{
+        color: $carrot-color;
+    }
+}
+
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -358,6 +369,139 @@ section{    // represents a generic standalone section of a document, which does
     flex-wrap: wrap-reverse;    // in minimised window show cat_food.JPG first, then text and shopping_cat.png 
 }
 
+.shop .box-container{           
+    @include grid(30rem);       // >30 = more products in horizontal position
+
+    .box{
+        position: relative;
+        overflow: hidden;
+
+        &:hover{
+
+            .dog_images img, .cat_images img{
+                transform: scale(1.1);
+            }
+
+            .cat_cart, .dog_cart{
+                transform: translateX(0rem);
+            }
+        }
+
+        .cat_images{                    // product images
+            height: 50rem;
+            width: 100%;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .dog_images{
+            height: 35rem;
+            width: 100%;
+            overflow: hidden;
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .cat_cart{                              // cart icon
+            position: absolute;
+            bottom: 24rem; right: 16.5rem;
+            z-index: 10;
+            transform: translateX(30rem);
+
+            a{
+                display: block;
+                width: 5rem;
+                height: 5rem;
+                line-height: 5rem;
+                font-size: 2.2rem;
+                margin-top: 1rem;
+                background: $white;
+                color: $black;
+                text-align: center;
+
+                &:hover{
+                    color: $white;
+                    background: $carrot-color;
+                }
+            }    
+        }
+
+        .dog_cart{
+            position: absolute;
+            bottom: 18.5rem; right: 17rem;
+            z-index: 10;
+            transform: translateX(30rem);
+
+            a{
+                display: block;
+                width: 5rem;
+                height: 5rem;
+                line-height: 5rem;
+                font-size: 2.2rem;
+                margin-top: 1rem;
+                background: $white;
+                color: $black;
+                text-align: center;
+
+                &:hover{
+                    color: $white;
+                    background: $carrot-color;
+                }
+            }
+        }
+
+        .cat_content{                           // product content
+            padding: 1rem 0;
+            text-align: center;
+
+            h3{
+                position: absolute;
+                bottom: 8.5rem; left: 12rem;
+                font-size: 1.6rem;
+                color: $black;
+                padding-bottom: .5rem;
+            }
+
+            .amount{
+                position: relative;
+                bottom: 5.5rem; left: 0rem;
+                font-size: 1.6rem;
+                color: $carrot-color;
+                padding-bottom: .3rem;
+            }
+        }
+
+        .dog_content{
+            padding: 1rem 0;
+            text-align: center;
+
+            h3{
+                position: absolute;
+                bottom: 1rem; left: 12rem;
+                font-size: 1.6rem;
+                color: $black;
+                padding-bottom: .5rem;
+            }
+
+            .amount{
+                position: relative;
+                top: 2rem; left: 0rem;
+                font-size: 1.6rem;
+                color: $carrot-color;
+                padding-bottom: .3rem;
+            }
+        }
+    }
+}
 
 
 
@@ -426,7 +570,6 @@ section{    // represents a generic standalone section of a document, which does
             }
         }
     }
-
 }
 
 @media (max-width:450px) {
