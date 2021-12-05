@@ -503,6 +503,95 @@ section{    // represents a generic standalone section of a document, which does
     }
 }
 
+// .contact{
+//     display: flex;
+//     align-items: center;
+//     flex-wrap: wrap;
+//     padding: 2rem 0;
+//     gap: 3rem;
+
+//     .image{
+//         flex: 1 1 40rem;
+
+//         img{
+//             width: 100%
+//         }
+//     }
+
+//     form{
+//         flex: 1 1 40rem;
+//         padding: 2rem 7%;
+
+//         .btn{
+//             @include form-btn();
+//         }
+      
+//         h3{
+//             font-size: 3rem;
+//             padding-bottom: 1rem;
+//             color:$black;
+//         }
+      
+//         .box, textarea{
+//             width: 100%;
+//             border-bottom: $border;
+//             border-width: .1rem;
+//             font-size: 1.6rem;
+//             text-transform: none;
+//             color:$black;
+//             padding:1.5rem 0;
+//             margin:1rem 0;
+//         }
+      
+//         textarea{
+//             height:15rem;
+//             resize: none;
+//         }
+//     }
+// }
+
+.footer{
+    position: relative;
+    background: url(../images/footer_background.jpg) no-repeat;
+    background-position: center;
+    background-size: center;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+  
+    img{
+      position: absolute;
+      top:0; left:0;
+      height:10rem;
+      width:100%;
+    }
+  
+    .share{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap:1.5rem;
+  
+      a{
+        @include white-btn();
+  
+        i{
+          padding-right: .5rem;
+        }
+      }
+    }
+  
+    .credit{
+      text-align: center;
+      color:$white;
+      font-size: 2rem;
+      padding:2rem 1rem;
+      margin-top: 2.5rem;
+  
+      span{
+        color:$carrot-color;
+      }
+    }
+  }
 
 
 
