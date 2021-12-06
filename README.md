@@ -57,3 +57,4 @@
 - cat food images https://www.pet-centar.hr/macke/hrana-1/dehidrirana-hrana.aspx?page=6&sort=PRODUCT_NAME-BASC
 - dog food images https://www.pet-centar.hr/psi/hrana/rustican.aspx
 
+- MD5 Encryption https://www.md5online.org/md5-encrypt.html
