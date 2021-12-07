@@ -1,27 +1,58 @@
 <?php
     session_start();
 
-    // if already logged IN 
-    if(isset($_SESSION['loggedIN'])){
-        header('Location: logged_in.php');
+    // if already logged in
+    if(isset($_SESSION['logged_admin'])){
+        header('Location: admin_home.php');
+        exit();
+    }
+    if(isset($_SESSION['logged_user'])){
+        header('Location: user_home.php');
         exit();
     }
 
     if(isset($_POST['login']))  {
-        $connection = new mysqli('localhost', 'root', '', 'pet_shop');
-        //$connection = new mysqli(host:'localhost', username:'root', passwd:'', dbname:'pet_shop');
+        $connection = new mysqli('localhost', 'root', '', 'petshop');
 
         $email = $connection->real_escape_string($_POST['emailPHP']);
-        $password = md5($connection->real_escape_string($_POST['passwordPHP']));
+        $password = $connection->real_escape_string($_POST['passwordPHP']);
 
-        $data = $connection->query("SELECT id FROM users WHERE email='$email' AND password='$password'");
-        if ($data->num_rows > 0){   // if there is some data in the table with email and passwd combination from above
-            $_SESSION['loggedIN'] = '1';
-            $_SESSION['email'] = $email;
-            exit('Log in success');
-        } else {
-            exit('Log in failed, please check your inputs.');
+        $sql = "SELECT * FROM user WHERE email='$email' AND password='$password'";
+        $result=mysqli_query($connection,$sql);
+        $row=mysqli_fetch_array($result);
+
+        if($row["usertype"]=="user")
+        {
+            $_SESSION['logged_user'] = '1';
+            $_SESSION["email"]=$email;
+            header("Location: user_home.php");
+            exit();
         }
+
+        elseif($row["usertype"]=="admin")
+        {
+            $_SESSION['logged_admin'] = '1';
+            $_SESSION["email"]=$email;
+            header("Location: admin_home.php");
+            exit();
+        }
+
+        else
+        {
+            exit("Please check your inputs, email/password is incorrect.");
+        }
+
+        
+        // WITHOUT SEPARATION ADMIN/USER
+        
+        // if ($data->num_rows > 0){   
+
+        //     $_SESSION['logged_admin'] = '1';
+        //     $_SESSION['email'] = $email;
+        //     exit('Log in success');
+        // } else {
+        //     exit('Log in failed, please check your inputs.');
+        // }
 
         // returning data to client side to make sure everything is ok
         // exit($email . " = " . $password);
@@ -107,8 +138,16 @@
                             success: function(response){
                                 $("#response").html(response);
 
-                                if(response.indexOf('success') >= 0)    // method indexOf on object response that will check the matching word
-                                    window.location = 'logged_in.php';  // if the matching word (success) exists, it will redirect to logged_in.php
+                                if(response.indexOf('success') >= 0) {   // method indexOf on object response that will check the matching word
+                                    if(isset($_SESSION['logged_admin']))
+                                    {
+                                        window.location = 'admin_home.php';
+                                    }
+                                    if(isset($_SESSION['logged_user']))
+                                    {
+                                        window.location = 'user_home.php';
+                                    }
+                                }      
                             },
                             dataType: 'text'
                         }
