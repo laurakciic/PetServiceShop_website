@@ -158,7 +158,7 @@
         <div class="content">
             <h3> air dried <span> dog food </span> </h3>
             <p> Premium air dried dog food because we love our dogs more than other humans and want them to live as long and healthy as possible. </p>
-            <a href="#"> <img src="images/dog_shopping.JPG" alt=""></a>
+            <a href="#shop"> <img src="images/dog_shopping.JPG" alt=""></a>
         </div>
 
     </div>
@@ -168,7 +168,7 @@
         <div class="content">
             <h3> air dried <span> cat food </span> </h3>
             <p> Premium air dried cat food because we love our cat more than other humans and want them to live as long and healthy as possible. </p>
-            <a href="#"> <img src="images/cat_shopping.JPG" alt=""></a>
+            <a href="#shop"> <img src="images/cat_shopping.JPG" alt=""></a>
         </div>
 
         <div class="image">
