@@ -142,14 +142,14 @@
         <div class="content">
             <h3>premium <span>pet food</span> manufacturer</h3>
             <p>The website you are currently seeing represents a project made for Web Programming course that I study at FERIT in Osijek.</p>
-            <a href="#" class="btn">read more</a>
+            <a href="#dog-food" class="btn">read more</a>
         </div>
 
     </section>
     <!-- about section end --> 
 
     <!-- dog and cat food banner start --> 
-    <div class="dog-food">
+    <div class="dog-food" id="dog-food">
 
         <div class="image">
             <img src="images/dog_food.png" alt="">
