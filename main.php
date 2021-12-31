@@ -30,9 +30,6 @@
             <a href="#about">about</a> 
             <a href="#shop">shop</a> 
             <a href="#share">social</a>
-            <!-- <a href="#services">services</a> 
-            <a href="#plan">plan</a> 
-            <a href="#contact">contact</a>  -->
         </nav>
 
         <div class="icons">
@@ -205,25 +202,6 @@
         </div>
     </section>
     <!-- shop section end -->
-
-    <!-- contact section start -->
-    <!-- <section class="contact" id="contact">
-
-        <div class="image">
-            <img src="images/contact.gif" alt="">
-        </div>
-
-        <form action="">
-            <h3>contact us</h3>
-            <input type="text" placeholder="your name" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="number" placeholder="your number" class="box">
-            <textarea name="" placeholder="your message" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" class="btn">
-        </form>
-
-    </section> -->
-    <!-- contact section end -->
 
     <!-- footer section start -->
     <section class="footer">
