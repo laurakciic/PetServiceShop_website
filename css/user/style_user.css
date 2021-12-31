@@ -163,92 +163,6 @@ section {
   color: #e67e22;
 }
 
-.header .login-form {
-  position: absolute;
-  top: 120%;
-  right: 2rem;
-  width: 35rem;
-  border-radius: 1rem;
-  background: #fff;
-  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  display: none;
-}
-
-.header .login-form.active {
-  display: block;
-  -webkit-animation: fadeIn .4s linear;
-          animation: fadeIn .4s linear;
-}
-
-.header .login-form h3 {
-  color: #130f40;
-  font-size: 2.5rem;
-  padding-bottom: .5rem;
-}
-
-.header .login-form .box {
-  width: 100%;
-  border-bottom: 0.2rem solid #130f40;
-  border-width: .1rem;
-  padding: 1.5rem 0;
-  font-size: 1.6rem;
-  color: #130f40;
-  text-transform: none;
-  margin: 1rem 0;
-}
-
-.header .login-form .remember {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: .5rem;
-  padding: 1rem 0;
-}
-
-.header .login-form .remember label {
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #666;
-}
-
-.header .login-form .btn {
-  width: 100%;
-  text-align: center;
-  margin: 1.5rem 0;
-}
-
-.header .login-form .btn:hover {
-  background: #130f40;
-}
-
-.header .login-form .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 1rem;
-}
-
-.header .login-form .links a {
-  font-size: 1.4rem;
-  color: #e67e22;
-}
-
-.header .login-form .links a:hover {
-  color: #130f40;
-  text-decoration: underline;
-}
-
 #menu-btn {
   display: none;
 }
@@ -264,7 +178,7 @@ section {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background: url(../images/home_bg2.jpg) no-repeat;
+  background: url(../../images/home_bg2.jpg) no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -275,7 +189,8 @@ section {
 }
 
 .home .content h3 {
-  font-size: 6rem;
+  font-size: 4rem;
+  text-transform: none;
   color: #fff;
   padding-bottom: 1rem;
 }
@@ -568,7 +483,7 @@ section {
 
 .footer {
   position: relative;
-  background: url(../images/footer_background.jpg) no-repeat;
+  background: url(../../images/footer_background.jpg) no-repeat;
   background-position: center;
   background-size: center;
   padding-top: 10rem;
@@ -680,4 +595,4 @@ section {
     width: 90%;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style_user.css.map */

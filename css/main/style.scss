@@ -250,7 +250,7 @@ section{    // represents a generic standalone section of a document, which does
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background: url(../images/home_bg2.jpg) no-repeat;
+    background: url(../../images/home_bg2.jpg) no-repeat;
     background-position: center;
     background-size: cover;
     position: relative;
@@ -552,7 +552,7 @@ section{    // represents a generic standalone section of a document, which does
 
 .footer{
     position: relative;
-    background: url(../images/footer_background.jpg) no-repeat;
+    background: url(../../images/footer_background.jpg) no-repeat;
     background-position: center;
     background-size: center;
     padding-top: 10rem;

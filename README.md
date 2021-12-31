@@ -12,6 +12,7 @@
 - paw icon https://fontawesome.com/v5.15/icons/paw
 - bars icon https://fontawesome.com/v5.15/icons/bars
 - user icon https://fontawesome.com/v5.15/icons/user
+- logout icon https://fontawesome.com/v5.15/icons/sign-out-alt
 
 - Google fonts https://fonts.google.com/specimen/Poppins
 
