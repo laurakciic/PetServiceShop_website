@@ -17,18 +17,10 @@ window.onscroll = () =>{
     logoutForm.classList.remove('active');
     navbar.classList.remove('active');
 
-    if(window.scrollY > 0){
-        document.querySelector('.header').classList.add('active');
-    } else{
-        document.querySelector('.header').classList.remove('active');
-    }
+    document.querySelector('.header').classList.add('active');
 }
 
 window.onload = () =>{
 
-    if(window.scrollY > 0){
-        document.querySelector('.header').classList.add('active');
-    } else{
-        document.querySelector('.header').classList.remove('active');
-    }
+    document.querySelector('.header').classList.add('active');
 }
