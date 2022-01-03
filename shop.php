@@ -1,4 +1,5 @@
 <?php
+    error_reporting(E_ALL & ~E_NOTICE); 
     include "connection.php";
     include "login.php";
 ?>
@@ -28,14 +29,26 @@
 
         <a href="#" class="logo"> <i class="fas fa-paw"></i> shop </div></a>
 
-        <nav class="navbar">
-            <a href="main.php">home</a> 
-        </nav>
+        <?php if($_SESSION["logged_admin"])     { ?>
+            <nav class="navbar">
+                <a href="main.php">home</a> 
+                <a href="admin_home.php">admin</a>
+            </nav>
+        <?php } elseif($_SESSION["logged_user"]) {   ?>
+            <nav class="navbar">
+                <a href="main.php">home</a> 
+                <a href="user_home.php"><?php echo $_SESSION["email"]?></a>
+            </nav>
+        <?php   } else {    ?>
+            <nav class="navbar">
+                <a href="main.php">home</a> 
+            </nav>
+        <?php }   ?>
 
         <div class="icons">
-            <div class="fas fa-bars" id="menu-btn"></div> 
+            <div class="fas fa-bars" id="menu-btn"></div>
             <a href="#" class="fas fa-shopping-cart"></a>
-            <div class="fas fa-user" id="login-btn"></div> 
+            <div class="fas fa-user" id="login-btn"></div>
         </div>
 
         <form action="#" method="POST" class="login-form">

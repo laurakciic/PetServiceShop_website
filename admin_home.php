@@ -32,7 +32,7 @@
         <nav class="navbar">
             <a href="#home">home</a> 
             <a href="#about">about</a> 
-            <a href="#shop">shop</a> 
+            <a href="shop.php">shop</a> 
             <a href="#share">social</a>
         </nav>
 
@@ -48,7 +48,7 @@
 
         <div class="content">
             <h3><span>welcome admin</span> <?php echo $_SESSION["email"]?></h3>
-            <a href="#shop" class="btn">Inspect shop</a>
+            <a href="shop.php" class="btn">Inspect shop</a>
         </div>
 
         <img src="images/bottom_wave.png" class="wave" alt="">

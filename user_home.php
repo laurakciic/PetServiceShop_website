@@ -31,7 +31,7 @@
         <nav class="navbar">
             <a href="#home">home</a> 
             <a href="#about">about</a> 
-            <a href="#shop">shop</a> 
+            <a href="shop.php">shop</a> 
             <a href="#share">social</a>
         </nav>
 
@@ -48,7 +48,7 @@
 
         <div class="content">
             <h3><span>welcome user</span> <?php echo $_SESSION["email"]?></h3>
-            <a href="#shop" class="btn">shop now</a>
+            <a href="shop.php" class="btn">shop now</a>
         </div>
 
         <img src="images/bottom_wave.png" class="wave" alt="">
@@ -101,95 +101,6 @@
 
     </div>
     <!-- dog and cat food banner end--> 
-
-    <!-- shop section start-->
-    <section class="shop" id="shop">
-
-        <h1 class="heading"> our <span> products </span></h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <div class="cat_cart">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                </div>
-                <div class="cat_images">
-                    <img src="images/cat_product01.jpg" alt="">
-                </div>
-                <div class="cat_content">
-                    <h3>whiskas beef</h3>
-                    <div class="amount"> 30 kn </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="cat_cart">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                </div>
-                <div class="cat_images">
-                    <img src="images/cat_product02.jpg" alt="">
-                </div>
-                <div class="cat_content">
-                    <h3>whiskas chicken</h3>
-                    <div class="amount"> 30 kn </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="cat_cart">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                </div>
-                <div class="cat_images">
-                    <img src="images/cat_product03.jpg" alt="">
-                </div>
-                <div class="cat_content">
-                    <h3>whiskas tuna</h3>
-                    <div class="amount"> 30 kn </div>
-                </div>
-            </div>
-            
-            <div class="box">
-                <div class="dog_cart">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                </div>
-                <div class="dog_images">
-                    <img src="images/dog_product01.jpg" alt="">
-                </div>
-                <div class="dog_content">
-                    <h3>rustican senior</h3>
-                    <div class="amount"> 30 kn </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="dog_cart">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                </div>
-                <div class="dog_images">
-                    <img src="images/dog_product02.jpg" alt="">
-                </div>
-                <div class="dog_content">
-                    <h3>rustican chicken</h3>
-                    <div class="amount"> 30 kn </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <div class="dog_cart">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                </div>
-                <div class="dog_images">
-                    <img src="images/dog_product03.jpg" alt="">
-                </div>
-                <div class="dog_content">
-                    <h3>rustican junior</h3>
-                    <div class="amount"> 30 kn </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- shop section end -->
 
     <!-- footer section start -->
     <section class="footer">
