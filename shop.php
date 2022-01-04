@@ -1,7 +1,45 @@
 <?php
     error_reporting(E_ALL & ~E_NOTICE); 
+    define('MYSQLI_ASSOC', 1);
     include "connection.php";
-    include "login.php";
+    //include "login.php";
+    require_once ('component.php');
+
+    require_once ('Shop_db.php');
+
+    // create instance of Createdb class
+    $database = new Shop_db("petshop", "product");
+
+    if (isset($_POST['add'])){
+        /// print_r($_POST['product_id']);
+        if(isset($_SESSION['cart'])){
+    
+            $item_array_id = array_column($_SESSION['cart'], "product_id");
+    
+            if(in_array($_POST['product_id'], $item_array_id)){
+                echo "<script>alert('Product is already added in the cart')</script>";
+                echo "<script>window.location = 'shop.php'</script>";
+            }else{
+    
+                $count = count($_SESSION['cart']);
+                $item_array = array(
+                    'product_id' => $_POST['product_id']
+                );
+    
+                $_SESSION['cart'][$count] = $item_array;
+            }
+    
+        }else{
+    
+            $item_array = array(
+                    'product_id' => $_POST['product_id']
+            );
+    
+            // Create new session variable
+            $_SESSION['cart'][0] = $item_array;
+            print_r($_SESSION['cart']);
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +55,7 @@
 
     <!-- custom css file link -->
     <link rel="stylesheet" href="css/shop/shop.css">
+    <link rel="stylesheet" href="css/shop/shop2.css">
 
     <!-- bootstrap cdn link -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -77,7 +116,7 @@
     <!-- home section end --> 
 
     <!-- shop section start-->
-    <section class="shop" id="shop">
+    <!-- <section class="shop" id="shop">
 
         <h1 class="heading"> popular <span> products </span></h1>
 
@@ -162,8 +201,73 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
     <!-- shop section end -->
+
+    <!-- shop2 section start-->
+    <!-- public function getData()   {
+        $sql = "SELECT*FROM $this->tablename";
+
+        $result = mysqli_query($this->connection, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            return $result;
+        }
+    } -->
+
+    <div class="container">
+        <div class="row text-center py-5">
+            <?php
+                //kohler
+                // $sql="SELECT * FROM product";
+
+                // if (!$q=mysqli_query($connection, $sql)){
+                //     echo "Nastala je greška pri izvođenju upita<br />";
+                //     die();
+                // }
+                // if (mysqli_num_rows($q)==0){
+                // echo "Nema proizvoda";
+                // }else {
+                //     while ($row=mysqli_fetch_array($q, MYSQLI_ASSOC)){
+                //         component($row['product'], $row['price'], $row['image'], $row['product_id']);
+                //     }
+                // }
+
+
+                // if(isset($_POST['add'])){
+                //     if(isset($_POST['cart'])){
+
+                //         $item_array_id = array_column($_SESSION['cart'], "product_id");
+                //         print_r($item_array_id);
+
+                //         if(in_array($_POST['product_id'], $item_array_id)){
+
+                //         }else{
+
+                //         }
+
+                //     }else{
+                //         $item_array = array(
+                //             'product_id'=>$_POST['product_id']
+                //         );
+
+                //         //create new session variable
+                //         $_SESSION['cart'][0] = $item_array;
+                //         print_r($_SESSION['cart']);
+                //     }
+                // }
+
+                $result = $database->getData();
+                while ($row = mysqli_fetch_assoc($result)){
+                    component($row['product'], $row['price'], $row['image'], $row['id']);
+                }
+
+            ?>
+            
+        </div>
+    </div>
+
+    <!-- shop2 section end-->
 
     <!-- footer section start -->
     <section class="footer">
