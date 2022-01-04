@@ -5,20 +5,21 @@
     require_once ('component.php');
     require_once ('Shop_db.php');
 
-    // create instance of Createdb class
+    // Create an instance of Shop_db class
     $database = new Shop_db("petshop", "product");
 
     if (isset($_POST['add'])){
-        /// print_r($_POST['product_id']);
         if(isset($_SESSION['cart'])){
     
             $item_array_id = array_column($_SESSION['cart'], "product_id");
     
             if(in_array($_POST['product_id'], $item_array_id)){
+
                 echo "<script>alert('Product is already added in the cart')</script>";
                 echo "<script>window.location = 'shop.php'</script>";
+
             }else{
-    
+
                 $count = count($_SESSION['cart']);
                 $item_array = array(
                     'product_id' => $_POST['product_id']
@@ -28,7 +29,7 @@
             }
     
         }else{
-    
+
             $item_array = array(
                     'product_id' => $_POST['product_id']
             );
@@ -48,20 +49,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Service Shop</title>
 
-    <!-- font awesome cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.css"/>
 
-    <!-- custom css file link -->
-    <!-- <link rel="stylesheet" href="css/shop/shop.css"> -->
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css/shop/shop2.css">
-
-    <!-- bootstrap cdn link -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    
 </head>
 <body>  
 
     <?php require_once ("shop_header.php"); ?>
+    
     <div class="container">
         <div class="row text-center py-5">
             <?php
