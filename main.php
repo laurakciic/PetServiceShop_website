@@ -49,7 +49,7 @@
             <input type="submit" value="sign in" class="btn" id="login">
             <div class="links">
                 <a href="#">forgot password</a> 
-                <a href="#">sign up</a> 
+                <a href="registration.php">sign up</a> 
             </div>
         </form>
     </header>

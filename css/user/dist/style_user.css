@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: #e67e22;
+  border-radius: 5rem;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.heading {
+  padding-bottom: 0.1rem;
+  text-align: center;
+  font-size: 3.5rem;
+  color: #130f40;
+}
+.heading span {
+  color: #e67e22;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2.8rem;
+  border-radius: 5rem;
+  border-top-left-radius: 0;
+  border: 0.2rem solid #130f40;
+  cursor: pointer;
+  background: none;
+  color: #130f40;
+  font-size: 1.7rem;
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #130f40;
+  z-index: -1;
+  transition: 0.2s linear;
+  clip-path: circle(0% at 0% 5%);
+}
+.btn:hover:before {
+  clip-path: circle(100%);
+}
+.btn:hover {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+.header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 9%;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transform: translateY(-10rem);
+}
+.header.active {
+  transform: translateY(0rem);
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: #130f40;
+  font-weight: bolder;
+}
+.header .logo i {
+  color: #e67e22;
+}
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: #666;
+}
+.header .navbar a:hover {
+  color: #e67e22;
+}
+.header .icons a, .header .icons div {
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  color: #130f40;
+  cursor: pointer;
+}
+.header .icons a:hover, .header .icons div:hover {
+  color: #e67e22;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: url(../../images/home_bg2.jpg) no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.home .content {
+  width: 50rem;
+}
+.home .content h3 {
+  font-size: 4rem;
+  text-transform: none;
+  color: #fff;
+  padding-bottom: 1rem;
+}
+.home .content h3 span {
+  color: #e67e22;
+}
+.home .content .btn {
+  color: #fff;
+  border-color: #fff;
+}
+.home .content .btn:hover {
+  color: #130f40;
+}
+.home .content .btn::before {
+  background: #fff;
+}
+.home .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 12rem;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about .image {
+  flex: 1 1 40rem;
+}
+.about .image img {
+  width: 100%;
+}
+.about .content {
+  flex: 1 1 40rem;
+}
+.about .content h3 {
+  color: #130f40;
+  font-size: 4rem;
+}
+.about .content h3 span {
+  color: #e67e22;
+}
+.about .content p {
+  font-size: 1.6rem;
+  color: #666;
+  padding: 1rem 0;
+  line-height: 2;
+}
+
+.dog-food,
+.cat-food {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+.dog-food .image,
+.cat-food .image {
+  flex: 1 1 40rem;
+}
+.dog-food .image img,
+.cat-food .image img {
+  width: 100%;
+}
+.dog-food .content,
+.cat-food .content {
+  flex: 1 1 40rem;
+  text-align: center;
+  padding: 2rem;
+}
+.dog-food .content h3,
+.cat-food .content h3 {
+  font-size: 3.5rem;
+  color: #130f40;
+}
+.dog-food .content h3 span,
+.cat-food .content h3 span {
+  color: #e67e22;
+}
+.dog-food .content p,
+.cat-food .content p {
+  padding: 1rem 0;
+  line-height: 2;
+  color: #666;
+  font-size: 1.6rem;
+}
+.dog-food .content a img,
+.cat-food .content a img {
+  height: 30rem;
+  margin-top: 1rem;
+}
+.dog-food .content a:hover img,
+.cat-food .content a:hover img {
+  transform: rotate(-15deg);
+}
+
+.cat-food {
+  flex-wrap: wrap-reverse;
+}
+
+.shop .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.shop .box-container .box {
+  position: relative;
+  overflow: hidden;
+}
+.shop .box-container .box:hover .dog_images img, .shop .box-container .box:hover .cat_images img {
+  transform: scale(1.1);
+}
+.shop .box-container .box:hover .cat_cart, .shop .box-container .box:hover .dog_cart {
+  transform: translateX(0rem);
+}
+.shop .box-container .box .cat_images {
+  height: 50rem;
+  width: 100%;
+  overflow: hidden;
+}
+.shop .box-container .box .cat_images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.shop .box-container .box .dog_images {
+  height: 35rem;
+  width: 100%;
+  overflow: hidden;
+}
+.shop .box-container .box .dog_images img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.shop .box-container .box .cat_cart {
+  position: absolute;
+  bottom: 24rem;
+  right: 16.5rem;
+  z-index: 10;
+  transform: translateX(30rem);
+}
+.shop .box-container .box .cat_cart a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  background: #fff;
+  color: #130f40;
+  text-align: center;
+}
+.shop .box-container .box .cat_cart a:hover {
+  color: #fff;
+  background: #e67e22;
+}
+.shop .box-container .box .dog_cart {
+  position: absolute;
+  bottom: 18.5rem;
+  right: 17rem;
+  z-index: 10;
+  transform: translateX(30rem);
+}
+.shop .box-container .box .dog_cart a {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  background: #fff;
+  color: #130f40;
+  text-align: center;
+}
+.shop .box-container .box .dog_cart a:hover {
+  color: #fff;
+  background: #e67e22;
+}
+.shop .box-container .box .cat_content {
+  padding: 1rem 0;
+  text-align: center;
+}
+.shop .box-container .box .cat_content h3 {
+  position: absolute;
+  bottom: 8.5rem;
+  left: 12rem;
+  font-size: 1.6rem;
+  color: #130f40;
+  padding-bottom: 0.5rem;
+}
+.shop .box-container .box .cat_content .amount {
+  position: relative;
+  bottom: 5.5rem;
+  left: 0rem;
+  font-size: 1.6rem;
+  color: #e67e22;
+  padding-bottom: 0.3rem;
+}
+.shop .box-container .box .dog_content {
+  padding: 1rem 0;
+  text-align: center;
+}
+.shop .box-container .box .dog_content h3 {
+  position: absolute;
+  bottom: 1rem;
+  left: 12rem;
+  font-size: 1.6rem;
+  color: #130f40;
+  padding-bottom: 0.5rem;
+}
+.shop .box-container .box .dog_content .amount {
+  position: relative;
+  top: 2rem;
+  left: 0rem;
+  font-size: 1.6rem;
+  color: #e67e22;
+  padding-bottom: 0.3rem;
+}
+
+.footer {
+  position: relative;
+  background: url(../../images/footer_background.jpg) no-repeat;
+  background-position: center;
+  background-size: center;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+}
+.footer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10rem;
+  width: 100%;
+}
+.footer .share {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.footer .share a {
+  color: #fff;
+  border-color: #fff;
+}
+.footer .share a:hover {
+  color: #130f40;
+}
+.footer .share a::before {
+  background: #fff;
+}
+.footer .share a i {
+  padding-right: 0.5rem;
+}
+.footer .credit {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  margin-top: 2.5rem;
+}
+.footer .credit span {
+  color: #e67e22;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 5rem 2rem;
+  }
+
+  .home {
+    justify-content: center;
+    background-position: right;
+  }
+  .home .content {
+    text-align: center;
+  }
+  .home h3 {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  .header .navbar a {
+    display: block;
+    margin: 2rem;
+    font-size: 2rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .header .login-form {
+    width: 90%;
+  }
+}
