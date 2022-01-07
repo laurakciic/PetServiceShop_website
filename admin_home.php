@@ -51,7 +51,7 @@
             <hr>
             <a href="edit_product.php" class="btn">update product</a>
             <hr>
-            <a href="add_product.php" class="btn">delete product</a>
+            <a href="delete_product.php" class="btn">delete product</a>
         </div>
 
         <img src="images/bottom_wave.png" class="wave" alt="">
