@@ -65,7 +65,7 @@
     <div class="container">
         <div class="row text-center py-5">
             <?php
-                $result = $database->getData();
+                $result = $database->getAllData();
                 while ($row = mysqli_fetch_assoc($result)){
                     component($row['product'], $row['price'], $row['image'], $row['id']);
                 }

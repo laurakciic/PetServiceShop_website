@@ -51,7 +51,7 @@
                         if (isset($_SESSION['cart'])){
                             $product_id = array_column($_SESSION['cart'], 'product_id');
 
-                            $result = $db->getData();
+                            $result = $db->getAllData();
                             while ($row = mysqli_fetch_assoc($result)){
                                 foreach ($product_id as $id){
                                     if ($row['id'] == $id){
