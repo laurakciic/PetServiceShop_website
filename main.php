@@ -26,7 +26,14 @@
         <a href="#" class="logo"> <i class="fas fa-paw"></i> shop </div></a>
         
         <nav class="navbar">
-            <a href="#home">home</a> 
+            <?php
+                if($_SESSION["logged_admin"] = true){   ?>
+                    <a href="authentification/users/admin_home.php">Profile</a> <?php  
+                } else { ?>
+                    <a href="#home">Home</a>    <?php 
+                }
+            ?>
+            
             <a href="#about">about</a> 
             <a href="CRUD/read/shop.php">shop</a> 
             <a href="#share">social</a>

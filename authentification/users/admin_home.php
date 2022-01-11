@@ -28,10 +28,6 @@
 
         <a href="#" class="logo"> <i class="fas fa-paw"></i> shop </div></a>
 
-        <nav class="navbar">  
-            <a href="../../CRUD/read/shop.php">shop</a> 
-        </nav>
-
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div> 
 			<a href="../logout.php" class="fas fa-sign-out-alt" id="logout-btn"></a> 
