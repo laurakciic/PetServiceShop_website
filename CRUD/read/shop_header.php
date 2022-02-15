@@ -31,6 +31,12 @@
                         ?>
                     </h5>
                 </a>
+
+                <a href="../../authentification/users/admin_home.php" class="nav-item nav-link active">
+                    <h5 class="px-5 cart">
+                        <i class="far fa-arrow-alt-circle-left"></i>
+                    </h5>
+                </a>
             </div>
         </div>
     </nav>

@@ -36,7 +36,10 @@
 
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div> 
-			<a href="../../authentification/logout.php" class="fas fa-sign-out-alt" id="logout-btn"></a> 
+			
+            <a href="../../authentification/users/admin_home.php" class="px-5 cart" id="logout-btn">
+                    <i class="far fa-arrow-alt-circle-left"></i> 
+            </a> 
         </div>
     </header>
     <!-- header section end -->
