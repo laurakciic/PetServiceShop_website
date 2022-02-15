@@ -39,6 +39,7 @@
                 <div class=\"col-md-6\">
                     <h5 class=\"pt-2\">$product_name</h5>
                     <h5 class=\"pt-2\">$product_price kn</h5>
+                    <button type=\"submit\" class=\"btn btn-warning\">Save for Later</button>
                     <button type=\"submit\" class=\"btn btn-danger\" name=\"remove\">Remove</button>
                 </div>
 
