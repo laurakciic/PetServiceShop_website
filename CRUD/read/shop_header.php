@@ -2,7 +2,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a href="shop.php" class="navbar-brand">
             <h3 class="px-5">
-                <i class="fas fa-shopping-basket"></i> Shopping Cart
+                <i class="fas fa-shopping-basket"></i> Shop
             </h3>
         </a>
         <button class="navbar-toggler"

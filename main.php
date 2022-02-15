@@ -27,7 +27,7 @@
         
         <nav class="navbar">
             <?php
-                if($_SESSION["logged_admin"] = true){   ?>
+                if(isset($_SESSION["logged_admin"]))  { ?>
                     <a href="authentification/users/admin_home.php">Profile</a> <?php  
                 } else { ?>
                     <a href="#home">Home</a>    <?php 
@@ -41,7 +41,7 @@
 
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div> 
-            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="CRUD/read/cart.php" class="fas fa-shopping-cart"></a>
             <div class="fas fa-user" id="login-btn"></div> 
         </div>
 
