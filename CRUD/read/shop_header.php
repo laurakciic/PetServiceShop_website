@@ -32,11 +32,30 @@
                     </h5>
                 </a>
 
-                <a href="../../authentification/users/admin_home.php" class="nav-item nav-link active">
-                    <h5 class="px-5 cart">
-                        <i class="far fa-arrow-alt-circle-left"></i>
-                    </h5>
-                </a>
+                <?php if(isset($_SESSION["logged_admin"])) { ?>
+
+                    <a href="../../authentification/users/admin_home.php" class="nav-item nav-link active">
+                        <h5 class="px-5 cart">
+                            <i class="far fa-arrow-alt-circle-left"></i>
+                        </h5>
+                    </a>
+
+                <?php } elseif(isset($_SESSION["logged_user"])) { ?>
+
+                    <a href="../../authentification/users/user_home.php" class="nav-item nav-link active">
+                        <h5 class="px-5 cart">
+                            <i class="far fa-arrow-alt-circle-left"></i>
+                        </h5>
+                    </a>
+
+                <?php } else { ?>
+                    
+                    <a href="../../main.php" class="nav-item nav-link active">
+                        <h5 class="px-5 cart">
+                            <i class="far fa-arrow-alt-circle-left"></i>
+                        </h5>
+                    </a>
+                <?php } ?>
             </div>
         </div>
     </nav>
