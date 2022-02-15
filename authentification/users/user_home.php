@@ -37,7 +37,7 @@
 
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div>
-			<a href="#" class="fas fa-shopping-cart"></a>
+			<a href="../../CRUD/read/cart.php" class="fas fa-shopping-cart"></a>
 			<a href="../logout.php" class="fas fa-sign-out-alt" id="logout-btn"></a> 
         </div>
     </header>
