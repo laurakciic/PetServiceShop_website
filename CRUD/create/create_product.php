@@ -36,10 +36,25 @@
 
         <div class="icons">
             <div class="fas fa-bars" id="menu-btn"></div> 
-			
-            <a href="../../authentification/users/admin_home.php" class="px-5 cart" id="logout-btn">
-                    <i class="far fa-arrow-alt-circle-left"></i> 
-            </a> 
+
+            <?php if(isset($_SESSION["logged_admin"])) { ?>
+
+                <a href="../../authentification/users/admin_home.php" class="px-5 cart" id="logout-btn">  <!-- ! -->
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                </a>
+
+            <?php } elseif(isset($_SESSION["logged_user"])) { ?>
+
+                <a href="../../authentification/users/user_home.php" class="px-5 cart" id="logout-btn">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                </a>
+
+            <?php } else { ?>
+
+                <a href="../../main.php" class="nav-item nav-link active" class="px-5 cart" id="logout-btn">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                </a>
+            <?php } ?>
         </div>
     </header>
     <!-- header section end -->
