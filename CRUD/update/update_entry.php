@@ -32,12 +32,15 @@
         $result = mysqli_query($connection, $sql);
 
         if($result){
-            echo "Product is successfully updated";
+            echo "<script>alert('Product is successfully updated!')</script>";
+            echo "<script>window.location = 'edit_product.php'</script>";
         }else {
-            echo "Problem occurred when updating the product<br />";
+            echo "<script>alert('Problem occurred when updating the product')</script>";
+            echo "<script>window.location = 'edit_product.php'</script>";
         }
     } else {
-        echo "Missing parameters";
+        echo "<script>alert('Missing parameters')</script>";
+        echo "<script>window.location = 'edit_product.php'</script>";
     }
     
     
