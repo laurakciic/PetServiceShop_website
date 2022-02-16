@@ -29,13 +29,16 @@
     $sql = "INSERT INTO product SET product='$_POST[product_name]', price='$_POST[product_price]', image='$_POST[product_img]'";
 
     if(mysqli_query($connection, $sql)){
-        echo "Product is successfully stored in the database";
-        echo "<br><br><a href='../read/shop.php'>inspect shop</a>";
-        echo "<br><br><a href='../delete/delete_product.php'>delete product</a>";
-        echo "<br><br><a href='../create/create_product.php'>add another product</a>";
-        echo "<br><br><a href='../../authentification/logout.php'>log out</a>";
+        echo "<script>alert('Product is successfully stored in the database!')</script>";
+        echo "<script>window.location = '../../authentification/users/admin_home.php'</script>";
+
+        // echo "Product is successfully stored in the database";
+        // echo "<br><br><a href='../read/shop.php'>inspect shop</a>";
+        // echo "<br><br><a href='../delete/delete_product.php'>delete product</a>";
+        // echo "<br><br><a href='../create/create_product.php'>add another product</a>";
+        // echo "<br><br><a href='../../authentification/logout.php'>log out</a>";
     }else {
-        echo "Problem occurred when storing the product<br />";
+        echo "<script>alert('Problem occurred when storing the product')</script>";
     }
 
 ?>
