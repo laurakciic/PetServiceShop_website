@@ -1,5 +1,5 @@
 <?php
-    //error_reporting(E_ALL & ~E_NOTICE); 
+    error_reporting(E_ALL & ~E_NOTICE); 
     include "./database/connection.php";
     session_start();
 
@@ -26,7 +26,8 @@
         }
         else
         {
-            exit("Please check your inputs, email/password is missing/incorrect.");
+            echo "<script>alert('Please check your inputs, email/password is missing/incorrect.')</script>";
+            echo "<script>window.location = 'main.php'</script>";
         }
     }
 ?>
