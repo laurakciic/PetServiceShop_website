@@ -1,7 +1,12 @@
 <?php
 	session_start();
 
-	if(!isset($_SESSION["logged_user"]))
+	if(isset($_SESSION["logged_admin"]))
+	{
+		header("Location: admin_home.php");
+	}
+
+    if(!isset($_SESSION["logged_user"]))
 	{
 		header("Location: ../../main.php");
 	}

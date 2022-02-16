@@ -39,7 +39,9 @@
                 <input type="text" name="email" required autofocus><br>
                 <label for="password">Password: </label>
                 <input type="password" name="password" required><br>
-                <button type="submit" name="deder">Deder</button>
+                <button type="submit" name="deder">Submit</button>
+
+                <a href="../main.php">go back</a> 
             </form>
         </div>
     </body>

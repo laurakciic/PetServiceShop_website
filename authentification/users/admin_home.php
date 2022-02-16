@@ -5,6 +5,11 @@
 	{
 		header("Location: ../../main.php");
 	}
+
+    if(isset($_SESSION["logged_user"]))
+	{
+		header("Location: user_home.php");
+	}
 ?>
 
 <!DOCTYPE html>

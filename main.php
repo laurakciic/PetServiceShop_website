@@ -49,13 +49,13 @@
             <h3>sign in</h3>
             <input type="email" name="email" placeholder="enter your email" id="email" class="box">  
             <input type="password" name="password" placeholder="enter your password" id="password" class="box">  
-            <div class="remember">
+            <!-- <div class="remember">
                 <input type="checkbox" name="" id="remember-me">
                 <label for="remember-me">remember me</label>
-            </div>
+            </div> -->
             <input type="submit" value="sign in" class="btn" id="login">
             <div class="links">
-                <a href="#">forgot password</a> 
+                <!-- <a href="#">forgot password</a>  -->
                 <a href="authentification/registration.php">sign up</a> 
             </div>
         </form>
