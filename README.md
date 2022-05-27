@@ -1,7 +1,13 @@
 ## Pet Service Shop Website
 
+#### Main Page
 ![Main Page](https://github.com/laurakciic/pet-food-shop/blob/master/main.gif)
 
+#### User Page
+![User Page](https://github.com/laurakciic/pet-food-shop/blob/master/user.gif)
+
+#### Admin Page
+![Admin Page](https://github.com/laurakciic/pet-food-shop/blob/master/admin.gif)
 
 ### Notes
 #### Rem values
