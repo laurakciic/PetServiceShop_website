@@ -1,6 +1,6 @@
 ## Pet Service Shop Website
 
-
+![Main Page](https://github.com/laurakciic/pet-food-shop/blob/master/main.gif)
 
 
 ### Notes
