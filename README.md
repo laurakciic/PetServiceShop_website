@@ -1,5 +1,6 @@
 ## Pet Service Shop Website
 
+![Pet Service Shop Tour](https://github.com/laurakciic/pet-food-shop/tree/master/images/petshop-tour.gif)
 
 
 ### Notes
